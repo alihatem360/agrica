@@ -1,11 +1,70 @@
 body {
-  background-color: #3d3c42;
+  background-color: rgb(24, 26, 27);
   height: 100000px;
 }
-body .navbar {
+
+.navbar {
   color: #fff;
   box-shadow: 0px 16px 18px -23px #fff;
   position: fixed;
   width: 100%;
-  background-color: #3d3c42;
+  background-color: rgb(24, 26, 27);
+  padding: 13px 54px;
+}
+.navbar .collapse button {
+  background-color: #7fb77e;
+  outline: none;
+  border: none;
+  padding: 12px 31px;
+  font-size: 21px;
+  font-weight: bolder;
+  position: relative;
+}
+.navbar .collapse button a:hover {
+  text-decoration: none;
+}
+.navbar .collapse button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #5bb318;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+.navbar .collapse button:hover::before {
+  width: 100%;
+}
+.navbar .collapse button a {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  padding: 11px 27px;
+  font-size: 20px;
+  position: relative;
+}
+.navbar .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #7fb77e;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+.navbar .navbar-nav .nav-link:hover::before {
+  width: 80%;
+}
+.navbar .navbar-toggler {
+  color: #5bb318;
+  outline: none;
+  border: none;
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */

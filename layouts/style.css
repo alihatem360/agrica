@@ -1,0 +1,11 @@
+body {
+  background-color: #3d3c42;
+  height: 100000px;
+}
+body .navbar {
+  color: #fff;
+  box-shadow: 0px 16px 18px -23px #fff;
+  position: fixed;
+  width: 100%;
+  background-color: #3d3c42;
+}/*# sourceMappingURL=style.css.map */

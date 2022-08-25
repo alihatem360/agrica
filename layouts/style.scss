@@ -1,8 +1,12 @@
-$background-color: rgb(24, 26, 27);
+// * {
+//   border: 1px solid #fff;
+// }
+
+$background-color: #2C3333;
 $basic-color: #fff;
 $basic-green-color: #5bb318;
-@mixin button {
-  background-color: #7fb77e;
+@mixin button($button-back, $before-color) {
+  background-color: $button-back; //#7fb77e
   outline: none;
   border: none;
   padding: 12px 31px;
@@ -20,7 +24,7 @@ $basic-green-color: #5bb318;
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: $basic-green-color;
+    background-color: $before-color;
     transition: all 0.3s ease-in-out;
     border-radius: 12px;
   }
@@ -34,17 +38,18 @@ body {
   height: 100000px;
 }
 
+// styles for the navbar
 .navbar {
   color: #fff;
-  box-shadow: 0px 16px 18px -23px #fff;
-  position: fixed;
+  // box-shadow: 0px 16px 18px -23px #fff;
+
   width: 100%;
   background-color: $background-color;
   padding: 13px 54px;
 
   .collapse {
     button {
-      @include button;
+      @include button(#7fb77e, $basic-green-color);
       a {
         color: $basic-color;
         position: relative;
@@ -74,11 +79,68 @@ body {
     }
   }
 
-  .navbar-toggler{
+  .navbar-toggler {
     color: $basic-green-color;
     outline: none;
     border: none;
     font-size: 32px;
+  }
+}
 
+// styles for the carousel
+.carousel {
+  margin-top: 95px;
+
+  .carousel-caption {
+    position: absolute;
+    top: 21%;
+
+    h3 {
+      font-size: 74px;
+      font-weight: 900;
+      margin: 0px 0px 28px 0;
+    }
+
+    p {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    button {
+      @include button(#dcebdc2e, #b5d1ae);
+      a {
+        color: #fff;
+        position: relative;
+        z-index: 23;
+      }
+    }
+  }
+  .carousel-inner {
+    height: 635px;
+  }
+
+  .carousel-control-prev i,
+  .carousel-control-next i {
+    outline: none;
+    border: none;
+    font-size: 55px;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+    span i {
+      background-color: #151615;
+      padding: 20px;
+      position: absolute;
+      top: 40%;
+    }
+    .fa-angle-left {
+      left: 0;
+    }
+
+    .fa-angle-right {
+      right: 0;
+    }
   }
 }
